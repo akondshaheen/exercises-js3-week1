@@ -36,17 +36,18 @@ console.log('The area of this polygon is ' + r.area);
 
 
 //extended class Triangle
-class Triangle2 extends Polygon {
+class Triangle extends Polygon {
   constructor(height, width) {
     super(height, width);
     this.name = "Triangle";
+    this.sides = 3;
   }
   get areasTriangle() { return (this.height * this.width) / 2; }
   sayName() {
     console.log('Hi, I am a Polygon and my name is ' + this.name + ".");
   }
 }
-var triangle = new Triangle2(12, 25);
+var triangle = new Triangle(12, 25);
 triangle.sayName();
 console.log("Total areas of this rectangle is " + triangle.areasTriangle + ".")
 
